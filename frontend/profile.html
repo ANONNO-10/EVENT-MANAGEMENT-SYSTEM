@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My profile | Eventora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="css/style.css">
+</head>
+<body class="workspace-page" data-page="profile">
+  <aside class="workspace-sidebar">
+    <a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-sparkles"></i></span>eventora</a>
+    <p class="sidebar-label">WORKSPACE</p><nav class="sidebar-nav"><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Overview</a><a href="events.html"><i class="fa-regular fa-compass"></i> Explore events</a><a class="active" href="profile.html"><i class="fa-regular fa-user"></i> My profile</a></nav>
+    <div class="sidebar-bottom"><a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Eventora</a><button id="logout-button"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button></div>
+  </aside>
+  <main class="workspace-main"><header class="workspace-topbar"><button class="workspace-menu" aria-label="Open dashboard navigation"><i class="fa-solid fa-bars"></i></button><span class="crumb">Workspace <i class="fa-solid fa-chevron-right"></i> My profile</span><a class="top-profile" href="profile.html"><span class="avatar" id="user-avatar">E</span><span id="top-user-name">My profile</span><i class="fa-solid fa-chevron-down"></i></a></header>
+    <section class="dashboard-content profile-content"><div class="welcome-row"><div><p class="eyebrow">ACCOUNT SETTINGS</p><h1>My profile</h1><p>Your account details and Eventora role.</p></div><a class="button button-quiet" href="dashboard.html"><i class="fa-solid fa-arrow-left"></i> Dashboard</a></div>
+      <div class="profile-layout"><section class="profile-card"><div class="profile-card-head"><span class="profile-avatar" id="profile-avatar">E</span><div><h2 id="profile-name-heading">Your profile</h2><span class="role-chip" id="profile-role-badge"></span></div></div><form id="profile-form"><label for="profile-name">Full name</label><input id="profile-name" required maxlength="80"><label for="profile-email">Email address</label><input id="profile-email" type="email" readonly aria-describedby="email-note"><small id="email-note">Email is fixed for this local demo account.</small><label for="profile-phone">Phone number</label><input id="profile-phone" type="tel" placeholder="Add a phone number"><p class="form-error" id="profile-error" role="alert"></p><button class="button" type="submit">Save changes <i class="fa-solid fa-check"></i></button></form></section>
+      <aside class="profile-note"><span class="note-icon"><i class="fa-solid fa-shield-halved"></i></span><h2>About your demo account</h2><p>Your role controls which workspace tools you see. Email and role are displayed here so you can confirm which account is active.</p><p>Profile data lives in this browser’s LocalStorage. This is for class demonstration only, not production authentication.</p></aside></div>
+    </section></main>
+  <div class="toast-region" aria-live="polite" aria-atomic="true"></div><script src="js/database.js"></script><script src="js/app.js"></script>
+</body>
+</html>

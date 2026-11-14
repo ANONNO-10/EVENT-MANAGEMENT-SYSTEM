@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="View event details and reserve tickets with Eventora.">
+  <title>Event details | Eventora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/event-details.css">
+</head>
+<body data-page="event-details">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-sparkles"></i></span>eventora</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a class="active" href="events.html">Events</a><a href="about.html">About</a></nav>
+    <div class="nav-actions"><a class="nav-login" href="login.html">Log in</a><a class="button button-small" href="register.html">Get started <i class="fa-solid fa-arrow-right"></i></a></div>
+  </header>
+  <main>
+    <section id="event-not-found" class="event-not-found" hidden><p class="eyebrow">EVENT NOT FOUND</p><h1>This event isn't available.</h1><p>It may have been removed or the link may be incorrect.</p><a class="button" href="events.html">Back to events <i class="fa-solid fa-arrow-right"></i></a></section>
+    <div id="event-details-content" hidden>
+      <div class="detail-banner" id="detail-image"><div class="detail-banner-shade"></div><div class="detail-banner-inner"><a class="detail-back" href="events.html"><i class="fa-solid fa-arrow-left"></i> All events</a><span id="detail-category" class="event-tag"></span></div></div>
+      <section class="event-detail-layout">
+        <article class="event-story">
+          <p class="eyebrow">EVENTORA PRESENTS</p><h1 id="detail-title"></h1><p class="detail-description" id="detail-description"></p>
+          <div class="detail-facts"><div><span class="fact-icon"><i class="fa-regular fa-calendar"></i></span><div><small>DATE</small><strong id="detail-date"></strong></div></div><div><span class="fact-icon"><i class="fa-solid fa-location-dot"></i></span><div><small>LOCATION</small><strong id="detail-location"></strong></div></div><div><span class="fact-icon"><i class="fa-solid fa-user-tie"></i></span><div><small>ORGANIZER</small><strong id="detail-organizer"></strong></div></div><div><span class="fact-icon"><i class="fa-solid fa-ticket"></i></span><div><small>SEATS</small><strong id="detail-seats"></strong></div></div></div>
+          <section class="event-about"><p class="eyebrow">GOOD TO KNOW</p><h2>A little more about the event</h2><p id="detail-long-description"></p></section>
+          <section class="event-reviews"><div class="reviews-heading"><div><p class="eyebrow">COMMUNITY NOTES</p><h2>Reviews</h2></div><span id="review-average" class="review-average"></span></div><div id="approved-reviews" class="approved-reviews"></div><p id="review-access-message" class="review-access-message"></p><form id="review-form" class="review-form" hidden><label for="review-rating">Your rating</label><select id="review-rating"><option value="5">5 stars · Loved it</option><option value="4">4 stars · Great</option><option value="3">3 stars · Good</option><option value="2">2 stars · Could be better</option><option value="1">1 star · Disappointing</option></select><label for="review-comment">Your review</label><textarea id="review-comment" rows="4" maxlength="600" placeholder="What should other guests know?" required></textarea><p class="form-error" id="review-error" role="alert"></p><button class="button" type="submit">Submit review <i class="fa-solid fa-arrow-right"></i></button></form></section>
+        </article>
+        <aside class="booking-card">
+          <p class="eyebrow">SAVE YOUR SPOT</p><div class="booking-price"><strong id="booking-base-price"></strong><span> / ticket</span></div><p class="availability" id="booking-availability"></p>
+          <div id="booking-access-message" class="booking-access"></div>
+          <form id="booking-form" hidden>
+            <label for="ticket-type">Ticket type</label><select id="ticket-type"><option value="regular">Regular · 1× price</option><option value="vip">VIP · 1.75× price</option><option value="premium">Premium · 2.5× price</option></select>
+            <label for="ticket-quantity">Number of tickets</label><div class="quantity-control"><button type="button" data-quantity-change="-1" aria-label="Remove one ticket"><i class="fa-solid fa-minus"></i></button><input id="ticket-quantity" type="number" min="1" value="1" inputmode="numeric" required><button type="button" data-quantity-change="1" aria-label="Add one ticket"><i class="fa-solid fa-plus"></i></button></div>
+            <div class="booking-total"><span>Total</span><strong id="booking-total"></strong></div>
+            <p class="form-error" id="booking-error" role="alert"></p><button class="button button-wide" type="submit">Confirm booking <i class="fa-solid fa-arrow-right"></i></button>
+            <p class="booking-demo-note"><i class="fa-solid fa-circle-info"></i> Demo booking only. No payment is collected.</p>
+          </form>
+          <section class="booking-confirmation" id="booking-confirmation" aria-live="polite" hidden><span><i class="fa-solid fa-circle-check"></i></span><h2>You're on the list.</h2><p>Your demo booking is saved.</p><small>BOOKING ID</small><code id="booking-confirmation-id"></code><a class="text-link" href="dashboard.html">View your dashboard <i class="fa-solid fa-arrow-right"></i></a></section>
+        </aside>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><a class="brand brand-footer" href="index.html"><span class="brand-mark"><i class="fa-solid fa-sparkles"></i></span>eventora</a><p>Make time for what brings us together.</p><span>© 2026 Eventora · Student demo</span></footer>
+  <div class="toast-region" aria-live="polite" aria-atomic="true"></div><script src="js/database.js"></script><script src="js/app.js"></script>
+</body>
+</html>

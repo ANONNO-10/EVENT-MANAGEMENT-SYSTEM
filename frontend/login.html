@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in | Eventora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page" data-page="login">
+  <header class="site-header auth-header"><a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-sparkles"></i></span>eventora</a><a class="nav-login" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to discover</a></header>
+  <main class="auth-layout">
+    <section class="auth-aside login-aside"><p class="eyebrow eyebrow-light">GOOD TO SEE YOU</p><h1>Pick up<br><em>where life happens.</em></h1><p>Your next event, your community, and your plans are right here.</p><div class="aside-quote"><i class="fa-solid fa-quote-left"></i><span>“The best stories start with showing up.”</span></div></section>
+    <section class="auth-form-wrap"><form class="auth-form" id="login-form" novalidate>
+      <p class="eyebrow">WELCOME BACK</p><h2>Log in to Eventora</h2><p class="form-intro">Enter your demo account details.</p>
+      <label for="login-email">Email address</label><input id="login-email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      <label for="login-password">Password</label><div class="password-field"><input id="login-password" type="password" autocomplete="current-password" placeholder="Your password" required><button type="button" class="password-toggle" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div>
+      <label class="check-label"><input id="remember-me" type="checkbox"><span>Remember me on this device</span></label>
+      <p class="form-error" id="login-error" role="alert"></p><button class="button button-wide" type="submit">Log in <i class="fa-solid fa-arrow-right"></i></button>
+      <div class="demo-accounts"><strong>Demo accounts</strong><span>Admin: admin@eventora.demo / admin123</span><span>Organizer: organizer@eventora.demo / organizer123</span><span>Customer: customer@eventora.demo / customer123</span></div>
+      <p class="switch-auth">New to Eventora? <a href="register.html">Create an account</a></p>
+    </form></section>
+  </main>
+  <div class="toast-region" aria-live="polite" aria-atomic="true"></div><script src="js/database.js"></script><script src="js/app.js"></script>
+</body>
+</html>

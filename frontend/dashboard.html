@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Eventora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="workspace-page" data-page="dashboard">
+  <aside class="workspace-sidebar">
+    <a class="brand" href="index.html"><span class="brand-mark"><i class="fa-solid fa-sparkles"></i></span>eventora</a>
+    <p class="sidebar-label">WORKSPACE</p><nav class="sidebar-nav"><a class="active" href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Overview</a><a href="events.html"><i class="fa-regular fa-compass"></i> Explore events</a><a href="profile.html"><i class="fa-regular fa-user"></i> My profile</a></nav>
+    <div class="sidebar-bottom"><a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Eventora</a><button id="logout-button"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button></div>
+  </aside>
+  <main class="workspace-main">
+    <header class="workspace-topbar"><button class="workspace-menu" aria-label="Open dashboard navigation"><i class="fa-solid fa-bars"></i></button><span class="crumb">Workspace <i class="fa-solid fa-chevron-right"></i> Overview</span><a class="top-profile" href="profile.html"><span class="avatar" id="user-avatar">E</span><span id="top-user-name">My profile</span><i class="fa-solid fa-chevron-down"></i></a></header>
+    <section class="dashboard-content"><div class="welcome-row"><div><p class="eyebrow" id="role-eyebrow">YOUR EVENTORA</p><h1 id="welcome-title">Welcome back</h1><p id="welcome-copy">Here's what's happening in your Eventora space.</p></div><a class="button" id="primary-action" href="events.html">Explore events <i class="fa-solid fa-arrow-right"></i></a></div>
+      <div class="stats-grid" id="stats-grid"></div>
+      <section class="dashboard-panel"><div class="panel-heading"><div><p class="eyebrow">YOUR SPACE</p><h2 id="panel-title">A good place to begin</h2></div><span class="role-chip" id="role-chip"></span></div><div id="dashboard-body"></div></section>
+      <section class="dashboard-panel admin-review-panel" id="admin-review-panel" hidden><div class="panel-heading"><div><p class="eyebrow">MODERATION</p><h2>Customer reviews</h2></div><span class="role-chip" id="pending-review-count">0 pending</span></div><div id="admin-review-list"></div></section>
+      <p class="demo-warning"><i class="fa-solid fa-circle-info"></i> Demo workspace. Account and sample data are stored only in this browser.</p>
+    </section>
+  </main>
+  <div class="modal-backdrop" id="event-modal" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" type="button" aria-label="Close"><i class="fa-solid fa-xmark"></i></button><p class="eyebrow">NEW EVENT</p><h2 id="modal-title">Create an event</h2><form id="create-event-form"><label for="event-name">Event name</label><input id="event-name" required maxlength="70" placeholder="e.g. Creative mornings"><label for="event-category">Category</label><select id="event-category"><option>Technology</option><option>Education</option><option>Music</option><option>Business</option><option>Workshop</option><option>Cultural</option></select><label for="event-date">Date</label><input id="event-date" type="date" required><label for="event-location">Location</label><input id="event-location" required maxlength="80" placeholder="City or venue"><label for="event-price">Ticket price (USD)</label><input id="event-price" type="number" min="0" max="99999" step="0.01" value="0" required><p class="form-error" id="event-error" role="alert"></p><button class="button button-wide" type="submit">Create event <i class="fa-solid fa-arrow-right"></i></button></form></section></div>
+  <div class="toast-region" aria-live="polite" aria-atomic="true"></div><script src="js/database.js"></script><script src="js/app.js"></script>
+</body>
+</html>
