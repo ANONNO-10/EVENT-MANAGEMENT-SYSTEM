@@ -11,7 +11,7 @@ A responsive event discovery and role-based account demo built with HTML, CSS, a
 
 </div>
 
-> **GitHub Pages:** The live URL is [arpita-10.github.io/EVENT-MANAGEMENT-SYSTEM](https://arpita-10.github.io/EVENT-MANAGEMENT-SYSTEM/). If it is not available yet, enable **Settings → Pages → Build and deployment → GitHub Actions** in the repository and wait for the deployment workflow to finish.
+> **GitHub Pages:** The live URL is https://anonno-10.github.io/EVENT-MANAGEMENT-SYSTEM/
 
 ## About
 
