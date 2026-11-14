@@ -6,12 +6,12 @@
 
 A responsive event discovery and role-based account demo built with HTML, CSS, and vanilla JavaScript.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Open%20Eventora-7655e8?style=for-the-badge)](https://anonno-10.github.io/EVENT-MANAGEMENT-SYSTEM/)
-[![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222?logo=github&style=for-the-badge)](https://github.com/ANONNO-10/EVENT-MANAGEMENT-SYSTEM/actions)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Open%20Eventora-7655e8?style=for-the-badge)](https://arpita-10.github.io/EVENT-MANAGEMENT-SYSTEM/)
+[![Deploy to GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222?logo=github&style=for-the-badge)](https://github.com/arpita-10/EVENT-MANAGEMENT-SYSTEM/actions)
 
 </div>
 
-> **GitHub Pages:** The live URL is [anonno-10.github.io/EVENT-MANAGEMENT-SYSTEM](https://anonno-10.github.io/EVENT-MANAGEMENT-SYSTEM/). If it is not available yet, enable **Settings → Pages → Build and deployment → GitHub Actions** in the repository and wait for the deployment workflow to finish.
+> **GitHub Pages:** The live URL is [arpita-10.github.io/EVENT-MANAGEMENT-SYSTEM](https://arpita-10.github.io/EVENT-MANAGEMENT-SYSTEM/). If it is not available yet, enable **Settings → Pages → Build and deployment → GitHub Actions** in the repository and wait for the deployment workflow to finish.
 
 ## About
 
